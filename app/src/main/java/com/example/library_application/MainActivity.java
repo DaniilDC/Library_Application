@@ -3,9 +3,12 @@ package com.example.library_application;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    private final String TAG = this.getClass().getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+
+        Log.e(TAG, "E LOG");
+
     }
     @Override
     protected void onStart() {
@@ -25,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+
+        Log.w(TAG, "W LOG");
+
     }
     @Override
     protected void onStop() {
@@ -34,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+
+        Log.i(TAG, "I LOG");
+
     }
     @Override
     protected void onDestroy() {
@@ -43,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+
+        Log.d(TAG, "D LOG");
+
     }
     @Override
     protected void onPause() {
@@ -52,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+
+        Log.v(TAG, "V LOG");
+
     }
     @Override
     protected void onResume() {
@@ -61,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
-    }
 
+        Log.v(TAG, "V LOG");
+
+    }
 }
